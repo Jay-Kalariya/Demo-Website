@@ -4,67 +4,79 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Demo Website</title>
-        <link rel="stylesheet" href="./style.css">
+        <!-- <link rel="stylesheet" href="./style.css"> -->
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <style>
-       .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh; /* Adjust height as needed */
-}
+    .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh; 
+        }
 
-.row {
-    display: flex;
-    width: 100%;
-    height: 50%; /* Each row takes up half the viewport height */
-}
+        .row {
+            display: flex;
+            width: 100%;
+            height: 50%; 
+        }
 
-.section {
-    flex: 1;
-    height: 100%;
-}
+        .section {
+            flex: 1;
+            height: 100%;
+        }
 
-.section1 {
-    background-color: white;
-}
+        .section1 {
+            background-color: white;
+        }
 
-.section2 {
-    background-color: white;
-    z-index: 9999;
-    position: relative;
-}
+        .section2 {
+            background-color: white;
+            z-index: 9999;
+        }
 
-.section3 {
-    background-color: white; /* Green */
-    z-index: 9999;
-    position: relative;
-}
+        .section3 {
+            background-color: white; 
+            z-index: 9999;
+        }
 
-.section4 {
-    background-color: white;
-}
+        .section4 {
+            background-color: white;
+        }
+
+        #fluid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+        }
        </style>
     </head>
 
     <body>
 
-        <canvas id="fluid" style="z-index: 99;"></canvas>
         <div class="container">
             <div class="row">
-                <div class="section section1"></div>
+
+                <div class="section section1">
+                    <canvas id="fluid"></canvas>
+                </div>
                 <div class="section section2"></div>
             </div>
             <div class="row">
-                <div class="section section3"></div>
-                <div class="section section4"></div>
+                <div class="section section3">
+                    <canvas id="fluid"></canvas>
+                </div>
+                <div class="section section4">
+                    <canvas id="fluid"></canvas>
+                </div>
             </div>
         </div>
-
         <script>
     
 window.addEventListener('load', () => {
