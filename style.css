@@ -2,13 +2,16 @@ body {
     background-color: white;
     width: 100dvw;
     height: 200dvh;
+    position: relative;
   }
   
   #fluid {
     position: fixed;
-    top: 0; left: 0;
+    top: 0; 
+    left: 0;
     width: 100dvw;
     height: 100dvh;
+    z-index: -1;
   } 
   :root {
     --card-height: 300px;
